@@ -1,0 +1,91 @@
+{
+  "name": "jira",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "env-cmd -e development craco start",
+    "start2": "craco start",
+    "build-test": "env-cmd -e test craco build",
+    "build-uat": "env-cmd -e uat craco build",
+    "build-prod": "env-cmd -e production craco build",
+    "build": "craco build",
+    "test": "craco test",
+    "start1": "react-scripts start",
+    "build1": "react-scripts build",
+    "test1": "react-scripts test",
+    "eject": "react-scripts eject",
+    "json-server": "json-server __json-server__/db.json --watch --port 6001 --middlewares ./__json-server__/middleware.js",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@ant-design/aliyun-theme": "^0.0.4",
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-card": "^1.14.22",
+    "@ant-design/pro-descriptions": "^1.9.19",
+    "@ant-design/pro-form": "^1.42.1",
+    "@ant-design/pro-layout": "^6.26.0",
+    "@ant-design/pro-list": "^1.14.5",
+    "@ant-design/pro-skeleton": "^1.0.1",
+    "@ant-design/pro-table": "^2.54.4",
+    "antd": "^4.16.13",
+    "env-cmd": "^10.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@craco/craco": "^6.3.0",
+    "@svgr/webpack": "^5.5.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.3.0",
+    "craco-alias": "^3.0.1",
+    "craco-antd": "^1.19.0",
+    "craco-less": "^1.20.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.2",
+    "json-server": "^0.16.3",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "typescript": "^4.1.2",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "prettier"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,css,less,md}": "prettier --write"
+  }
+}

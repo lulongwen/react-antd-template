@@ -1,0 +1,5 @@
+{
+	"comment": "配置 ts的 sdk",
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true
+}
